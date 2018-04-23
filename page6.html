@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="404.html" method="post">
+        <table>
+            <caption>Dang ki tim ban</caption>
+            <tr>
+                <td>Hoten</td>
+                <td><input type="text" size="40px" placeholder="Nhap Khong Dau" maxlength="5" required="required" pattern="^SE[0-9][0-9][0-9]$"/></td>
+            </tr>
+
+            <tr>
+                <td>NgaySinh</td>
+                <td><input type="date"/></td>
+            </tr>
+
+            <tr>
+                <td>GioiTinh</td>
+                <td>
+                    <input type="radio" name="sex" checked="checked"/>name
+                    <input type="radio" name="sex"/>nu
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tai khoan</td>
+                <td><input type="text" value="thino"></td>
+            </tr>
+
+            <tr>
+                <td>MatKhau</td>
+                <td><input type="password"/></td>
+            </tr>
+
+            <tr>
+                <td>NgheNghiep</td>
+                <td>
+                    <select style="width: 200px; height: 50px;">
+                        <option>hocsinh</option>
+                        <option>sinhvien</option>
+                        <option>khac</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Sothich</td>
+                <td>
+                    <input type="checkbox" checked="checked"/>du lich
+                    <input type="checkbox"/>doc sach
+                    <input type="checkbox"/>nghe nhac
+                </td>
+            </tr>
+
+            <tr>
+                <td>Ghi chu</td>
+                <td><textarea rows="5" cols="40"></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="dang ki" />
+                    <input type="reset" value="nhap lai" />
+                    <input type="button" value="xem dieu khoan" disabled="disabled" />
+
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form action="404.html">
+        <input type="color"/>
+        <input type="number" value="1" min="1" max="5"/> <br>
+        nhap keyword: <input type="text" list="Goi Y">
+        <datalist id="Goi Y">
+            <option>ga</option>
+            <option>vit</option>
+            <option>cua</option>
+        </datalist><br/>
+        <input type="file"/><br/>
+        <input type="hidden" value="DuongPTH">
+    </form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #hinh {
+            width: 200px;
+            height: 200px;
+        }
+
+        #qc {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        a {
+            font-size: 20px;
+            font-family: Tahoma;
+            text-decoration: none;
+        }
+
+        a:link {
+            background-color: black;
+            color: white;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        a:active {
+            background-color: gray;
+        }
+
+        a:visited {
+            color: yellow;
+        }
+    </style>
+    <script>
+        function show() {
+            var t = document.getElementById("hinh");
+            t.style.visibility = "visible";
+//            t.style.opacity = 1;
+//            t.style.display = "inline-block";
+
+        }
+
+        function unshow() {
+            var t = document.getElementById("hinh");
+            t.style.visibility = "hidden";
+//            t.style.opacity = 0;
+//            t.style.display = "none";
+        }
+
+        function warning() {
+            alert("Co yeu em");
+        }
+        function tatqc() {
+            var t = document.getElementById("qc");
+            t.style.visibility = "hidden";
+        }
+    </script>
+</head>
+<body>
+<a href="http://www.w3cshools.com">link1</a>
+<a href="http://cms-hcm.fpt.edu.vn">link2</a>
+<a href="http://www.google.com">link3</a>
+<img src="resource/me.jpg" id="hinh" onmouseover="warning()">
+<input type="button" value="show" onclick="show()">
+<input type="button" value="unshow" onclick="unshow()">
+<div id="qc"></div>
+<p onclick="tatqc()">close</p>
+</body>
+</html>

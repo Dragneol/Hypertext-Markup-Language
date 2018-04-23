@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin: 50px;
+            border: 1px solid black;
+        }
+
+        div p {
+            width: 100%;
+            background-color: #333;
+        }
+    </style>
+    <script !src="">
+        function catvaoong(id) {
+        event.dataTransfer.setData("duong", id);
+        }
+
+        function xinphep() {
+            event.preventDefault();
+        }
+
+        function layra() {
+            var ma = event.dataTransfer.getData("duong");
+            var tag = document.getElementById(ma);
+
+            event.target.appendChild(tag);
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">
+        <p id="dv" draggable="true" ondragstart="catvaoong(this.id)">bla boa bas basd fas daw</p>
+    </div>
+
+    <div id="d2" ondragover="xinphep()" ondrop="layra()"></div>
+</body>
+</html>

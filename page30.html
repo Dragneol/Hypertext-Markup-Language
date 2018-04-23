@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <script !src="">
+        var arr = new Array("resource/img1.jpg", "resource/img2.jpg", "resource/img3.jpg");
+        var i = 0;
+        var id;
+        function changeImage() {
+            var t = document.getElementById("hinh");
+            t.src = arr[i];
+            i++;
+            if (i >= arr.length) i = 0;
+            id = window.setTimeout("changeImage()", 500);
+        }
+        function dungQC() {
+            window.clearTimeout(id);
+        }
+        function openPage() {
+            if(i == 0)
+                window.open("http://www.google.com");
+            else if (i == 1)
+                window.open("http://www.vnexpress.net");
+            else window.open("page30.html");
+        }
+    </script>
+</head>
+<body onload="changeImage()">
+<img src="resource/ghost.jpg" alt="" id="hinh" onmouseover="dungQC()" onmouseout="changeImage()" onclick="openPage()">
+</body>
+</html>

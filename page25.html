@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script !src="">
+        function printMsg(s) {
+            window.alert(s);
+        }
+        function calculate(op, para1, para2, result) {
+            var t1 = parseFloat(document.getElementById(para1).value);
+            var t2 = parseFloat(document.getElementById(para2).value);
+            var t3 = document.getElementById(result);
+            switch (op) {
+                case '+':
+                    t3.value = t1 + t2;
+                    break;
+                case '-':
+                    t3.value = t1 - t2;
+                    break;
+                case '*':
+                    t3.value = t1 * t2;
+                    break;
+                case '/':
+                    t3.value  = t1 / t2;
+                    break;
+            }
+        }
+    </script>
+</head>
+<body onload="printMsg('Sap nghi')">
+<input type="button" value="suprise" onclick="printMsg('Moi nguoi dc nhan $100')">
+<br/>
+<input type="text" id="t1">
+<input type="text" id="t2">
+<br/>
+<input type="button" value="add" onclick="calculate('+', 't1', 't2', 't3')">
+<input type="button" value="min" onclick="calculate('-', 't1', 't2', 't3')">
+<input type="button" value="mul" onclick="calculate('*', 't1', 't2', 't3')">
+<input type="button" value="div" onclick="calculate('/', 't1', 't2', 't3')"><br/>
+<input type="text" name="result" id="t3">
+</body>
+</html>

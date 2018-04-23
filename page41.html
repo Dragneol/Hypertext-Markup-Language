@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script !src="">
+        var arr = [
+            {
+                ma: "111",
+                ten: "quan",
+            },
+            {
+                ma: "222",
+                ten: "ao",
+            },
+            {
+                ma: "444",
+                ten: "tu"
+            }
+        ];
+        function tim(tencantim) {
+            var kq = new Array(0); // tạo 1 mảng với kích thước bằng 0
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].ten.match(tencantim) != null)
+                    kq.push(arr[i]);
+            }
+            return kq;
+        }
+        function demo(x) {
+            if (event.keyCode == 13) {
+                var kq = tim(x.value);
+                if (kq.length == 0) alert("Not found");
+                else {
+                    var d = document.getElementById("ketqua");
+                    d.innerHTML = "";
+                    for (var i = 0; i < kq.length; i++) {
+                        var text = "<br> ma:" + kq[i].ma;
+                        text = text + "<br> ten:" + kq[i].ten;
+                        d.innerHTML = d.innerHTML + text;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" onkeypress="demo(this)">
+<div id="ketqua"></div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #d1 {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            margin: auto;
+            position: relative;
+        }
+
+        #d2 {
+            width: 400px;
+            height: 1300px;
+            border: 1px solid red;
+            margin: auto;
+        }
+
+        #d11 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+
+        #d22 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            left: -50px;
+        }
+
+        #d3 {
+            width: 200px;
+            height: 250px;
+            background-color: pink;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        #i1 {
+            left: 50px;
+            z-index: 1;
+            position: relative;
+
+        }
+
+        #i2 {
+
+            z-index: 2;
+            position: relative;
+
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <div id="d11"></div>
+</div>
+<div id="d2">
+    <div id="d22"></div>
+</div>
+<div id="d3"></div>
+<img src="resource/img1.JPG" id="i1">
+<img src="resource/img3.JPG" id="i2">
+</body>
+</html>

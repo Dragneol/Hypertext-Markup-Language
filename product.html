@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="data2.js"></script>
+    <style>
+        .body {
+            font-family: sans-serif;
+            position: absolute;
+        }
+
+        #productList {
+            width: 100%;
+            height: auto;
+        }
+
+        #productList div {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin: 10px;
+            border: 2px solid black;
+            background-size: contain;
+        }
+
+        #detail {
+            width: 50%;
+            height: 300px;
+            opacity: 0.5;
+            background-color: whitesmoke;
+            position: fixed;
+            left: 25%;
+            bottom: 50%;
+            display: none;
+        }
+
+        #detail span {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        #detail span:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="loadImage()">
+<div id="productList"></div>
+<div id="detail">
+    <span onclick="closeDetail()">Close</span>
+    <div id="detail2"></div>
+</div>
+</body>
+</html>

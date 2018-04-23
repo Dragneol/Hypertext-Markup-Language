@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script !src="">
+    function demo(x) {
+        if (event.keyCode >= 48 && event.keyCode <= 57) {
+            alert("nhap so");
+            x.style.backgroundColor = "yellow";
+        } else {
+            x.style.backgroundColor = "white";
+        }
+    }
+
+    function demo2(x) {
+        x.style.textAlign = 'right';
+    }
+
+    function demo3(x) {
+        if (x.value.length == 0) {
+            alert("Khong de trong");
+            //            x.focus();
+        }
+    }
+</script>
+
+<body>
+    <form action="" name="f">
+        <p>
+            <input type="number" name="txt" onkeypress="demo(this)" onfocus="demo2(this)" onblur="demo3(this)" "></p>
+</form>
+</body>
+</html>

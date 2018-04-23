@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .img {
+            width: 500px;
+            height: 500px;
+            transition: 0.5s;
+        }
+    </style>
+    <script>
+        function changeSize(target, rateX, rateY) {
+            target.style.transform = "scale(" + rateX + "," + rateY + ")";
+        }
+    </script>
+</head>
+<body>
+<img src="resource/L.jpg" class="img" onmouseover="changeSize(this, 1.2, 1.2)" onmouseout="changeSize(this, 1, 1)">
+<img src="resource/ghost.jpg" class="img" onmouseover="changeSize(this, 1.2, 1.2)" onmouseout="changeSize(this, 1, 1)">
+</body>
+</html>

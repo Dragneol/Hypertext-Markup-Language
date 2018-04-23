@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .ngoai {
+            width: 150px;
+            height: 200px;
+            border: 2px solid black;
+            overflow: hidden;
+            float: left;
+            margin-right: 1%;
+        }
+
+        .trong {
+            width: 150px;
+            height: 400px;
+            transition: transform 1s;
+        }
+
+        .trong img {
+            width: 150px;
+            height: 200px;
+        }
+
+        .trong p {
+            width: 150px;
+            height: 200px;
+        }
+
+        .ngoai:hover .trong {
+            transform: translateY(-200px);
+        }
+
+        #qc {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            animation-name: xxx;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transition: all 1s;
+        }
+
+        @keyframes xxx {
+            from {
+                background-color: pink;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                opacity: 0.5;
+            }
+            to {
+                background-color: black;
+                left: 600px;
+                top: 400px;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="ngoai">
+    <div class="trong">
+        <img src="resource/img1.JPG" alt="">
+        <p>
+            Hoa : basa <br>
+            Xuat xu: VieTNAM <br>
+        </p>
+    </div>
+</div>
+<div class="ngoai">
+    <div class="trong">
+        <img src="resource/img1.JPG" alt="">
+        <p>
+            Hoa : basa <br>
+            Xuat xu: VieTNAM <br>
+        </p>
+    </div>
+</div>
+<div class="ngoai">
+    <div class="trong">
+        <img src="resource/img1.JPG" alt="">
+        <p>
+            Hoa : basa <br>
+            Xuat xu: VieTNAM <br>
+        </p>
+    </div>
+</div>
+<div id="qc"></div>
+</body>
+</html>

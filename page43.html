@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #dssp {
+            width: 70%;
+            height: 300px;
+            background-color: #ccc;
+        }
+
+        #dssp div {
+            width: 220px;
+            height: 200px;
+            float: left;
+            margin: 5px;
+        }
+
+        #dssp img {
+            width: 100px;
+            height: 100px;
+        }
+
+        #gio {
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            background-color: #ff0;
+        }
+    </style>
+
+    <script src="giohang.js">
+
+        function catvaoong(hinh, masp, tensp, gia) {
+            event.dataTransfer.setData("hinh", hinh);
+            event.dataTransfer.setData("masp", masp);
+            event.dataTransfer.setData("tensp", tensp);
+            event.dataTransfer.setData("gia", gia);
+        }
+
+        function tatrada() {
+            event.preventDefault();
+        }
+
+        function layra() {
+            var tenhinh = event.dataTranser.getData("hinh");
+            var anhmoi = document.createElement("img");
+            anhmoi.src = tenhinh;
+            event.target.appendChild(anhmoi);
+
+            var masp = event.dataTransfer.getData("masp");
+            var tensp = event.dataTransfer.getData("tensp");
+            var gia = event.dataTransfer.getData("gia");
+
+            add(masp, tensp, tensp, gia);
+        }
+    </script>
+</head>
+<body onload="init()">
+<div id="dssp">
+    <div>
+        ma:11<br>
+        ten:quan<br>
+        <img src="resource/img1.jpg" alt="" draggable="true" id="h1" ondragstart="catvaoong(this.src, '11', 'quan',100)">
+    </div>
+
+    <div>
+        ma:22<br>
+        ten:ao<br>
+        <img src="resource/img2.JPG" alt="" draggable="true" id="h2" ondragstart="catvaoong(this.src, '22', 'ao',200)">
+    </div>
+</div>
+<div id="gio" ondrop="layra()"></div>
+</body>
+</html>

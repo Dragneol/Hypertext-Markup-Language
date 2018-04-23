@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script !src="">
+        function demo1() {
+            window.open("http://www.google.com", "_blank", "width = 300, height = 300");
+        }
+
+        function demo2() {
+            var w = window.open();
+            var tag1 = document.createElement("p");
+            tag1.innerHTML = document.getElementById("txt").value;
+            w.document.body.appendChild(tag1);
+            w.document.title = "Result";
+        }
+
+        var dem = 5;
+        var id;
+        function countDown() {
+            dem--;
+            document.getElementById("timer").innerHTML = "Wait " + dem + " s";
+            if (dem == 0) {
+                window.clearTimeout(id);
+//                window.close()
+//                window.location.href = "http://google.com";
+//                window.location.replace("http://google.com");
+//                window.location.assign("http://google.com");
+            }
+            console.log(id);
+        }
+        function run() {
+            id = window.setInterval(countDown, 1000);
+        }
+    </script>
+</head>
+<body onload="//run()">
+<p id="timer"></p>
+<input type="button" value="open window" onclick="demo1()">
+<br>
+<input type="text" id="txt"><input type="button" value="xuat" onclick="demo2()">
+<a href="page46.html" target="_self">qua trang 46</a>
+</body>
+</html>

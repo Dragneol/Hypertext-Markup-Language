@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var s = "lien he quang cao";
+        var i = 0;
+        function chayQC() {
+            var arr = s.split(" ");
+            var t = document.getElementById("qc");
+            t.innerHTML = t.innerHTML + " " + arr[i];
+            i++;
+            if (i > arr.length) {
+                i = 0;
+                t.innerHTML = "";
+            }
+            window.setTimeout("chayQC()", 500);
+        }
+        function copy() {
+            var v1 = document.f.ten1.value;
+            var v2 = document.f.dt1.value;
+            if (v1.length == 0) {
+                alert("Ten khong de trong");
+                document.f.chon.checked = false;
+            }
+            else if (v2.match("^[0-9]{8,12}$") == null) {
+                alert("Dien thoai khong hop le");
+                document.f.chon.checked = false;
+            }
+            else {
+
+                if (document.f.chon.checked) {
+                    document.f.chon.checked = true;
+                    document.f.ten2.value = v1.toUpperCase();
+                    document.f.dt2.value = v2;
+                }
+                else {
+                    document.f.chon.checked = false;
+                    document.f.ten2.value = "";
+                    document.f.dt2.value = "";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<p id="qc"></p>
+<form name="f">
+    <h2>Thong tin mua hang</h2>
+    ho ten <input type="text" name="ten1"><br>
+    dien thoai <input type="text" name="dt1">
+
+    <input type="checkbox" onclick="copy()" name="chon">nguoi nhan la nguoi mua <br>
+    <h2>Thong tin nguoi nhan</h2>
+    ho ten <input type="text" name="ten2"><br>
+    dien thoai <input type="text" name="dt2">
+</form>
+</body>
+</html>

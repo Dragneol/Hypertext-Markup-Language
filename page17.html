@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+
+    #header li:hover {
+        cursor: pointer;
+    }
+
+    #header {
+        width: 100%;
+        height: 80px;
+        float: left;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    ul.menu > li {
+        width: 20%;
+        font-size: 20px;
+        background-color: maroon;
+        color: whitesmoke;
+        text-align: center;
+        margin: 2%;
+        display: inline-block;
+        float: left;
+    }
+
+    .submenu {
+        background-color: #999;
+        padding-left: 0px;
+        display: none;
+    }
+
+    ul.submenu > li {
+        background-color: #066;
+        list-style-type: none;
+    }
+
+    li:hover > ul {
+        display: block;
+    }
+
+    ul.menu > li:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    ul.menu > li:last-child {
+        border-top-right-radius: 10px;
+    }
+
+    #content {
+        width: 100%;
+        border: 1px solid black;
+        height: auto;
+        float: left;
+    }
+
+    div#content > h1:before {
+        content: "___________";
+    }
+
+    div#content > h1:after {
+        content: "___________";
+    }
+
+    div#content > p:first-line {
+        font-style: italic;
+    }
+
+    div#content > p:first-letter {
+        font-size: 36px;
+    }
+
+    div#content > p {
+        text-indent: 36px;
+    }
+
+    div#content > table {
+        width: 50%;
+        border: 5px solid red;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ffc;
+    }
+
+    tr:nth-child(even) {
+        background-color: #cfc;
+    }
+
+    #footer {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        float: left;
+        overflow: scroll;
+    }
+</style>
+<body>
+<!--menu-->
+<div id="header">
+    <ul class="menu">
+        <li>Trang chu</li>
+        <li>Phu kien
+            <ul class="submenu">
+                <li>Dep</li>
+                <li>Guoc</li>
+            </ul>
+        </li>
+        <li>Quan Ao
+            <ul class="submenu">
+                <li>Quan</li>
+                <li>Ao</li>
+            </ul>
+        </li>
+        <li>Khuyen Mai</li>
+    </ul>
+</div>
+
+<div id="content">
+    <h1>NEWS</h1>
+    <p>Hom nay co mot xac chet duoc tim thay<br/>
+        Nhung hien tai van chua tim duoc hung thu</p>
+    <table>
+        <tr>
+            <td>Co yeu em</td>
+        </tr>
+        <tr>
+            <td>Co yeu em</td>
+        </tr>
+        <tr>
+            <td>Co yeu em</td>
+        </tr>
+        <tr>
+            <td>Co yeu em</td>
+        </tr>
+        <tr>
+            <td>Co yeu em</td>
+        </tr>
+    </table>
+</div>
+
+<div id="footer">
+    <p>
+        bla vla vlaa ]awkd akwdnf kansfls <br>
+        bla vla vlaa ]awkd akwdnf kansfls <br>
+        bla vla vlaa ]awkd akwdnf kansfls <br>
+        bla vla vlaa ]awkd akwdnf kansfls
+    </p>
+    <p>
+        bla vla vlaa ]awkd akwdnf kansfls <br>
+        bla vla vlaa ]awkd akwdnf kansfls <br>
+        bla vla vlaa ]awkd akwdnf kansfls <br>
+        bla vla vlaa ]awkd akwdnf kansfls
+    </p>
+</div>
+</body>
+</html>

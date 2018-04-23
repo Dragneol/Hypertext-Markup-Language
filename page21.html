@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .sp {
+            width: 200px;
+            height: 200px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        div.sp img {
+            width: 200px;
+            height: 200px;
+            transition: all;
+        }
+
+        div.sp:hover img {
+            transform: scale(1.3, 1.3);
+        }
+
+        #giohang {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: fixed;
+            right: 0px;
+            top: 0px;
+            visibility: hidden;
+            transition: all 2s;
+        }
+
+        span:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var flag = true;
+        function xemgiohang() {
+            var t = document.getElementById("giohang");
+            if (flag == true) {
+                t.style.visibility = "visible";
+//                t.style.width = "500px";
+//                t.style.height = "500px";
+                t.style.transform = "scale(5,5)";
+                flag = false;
+            }
+            else {
+                t.style.transform = "scale(0.2,0.2)";
+                t.style.visibility = "hidden";
+                flag = true;
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<span onclick="xemgiohang()">Gio hang</span>
+<div class="sp"><img src="resource/img1.JPG" alt=""></div>
+<div id="giohang"></div>
+</body>
+</html>

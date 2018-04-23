@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script !src="">
+        function loadProduct() {
+            var a = ["TV", "Fred", "AirCon"];
+            var b = ["ip6", "ip7", "ipod"];
+
+            var s1 = document.getElementById("brand");
+            var s2 = document.getElementById("products");
+
+            var pos = s1.selectedIndex;
+            while (s2.length > 0) s2.remove(0);
+            if (pos == 1) {
+                for (var i = 0; i < a.length; i++) {
+                    var op = document.createElement("option");
+                    op.innerHTML = a[i];
+                    s2.appendChild(op);//s2.add(op) : same
+                }
+            } else if (pos == 2) {
+                for (var i = 0; i < a.length; i++) {
+                    var op = document.createElement("option");
+                    op.innerHTML = b[i];
+                    s2.appendChild(op);//s2.add(op) : same
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<select name="" id="brand" onchange="loadProduct()">
+    <option value="">choose...</option>
+    <option value="">SamSung</option>
+    <option value="">Apple</option>
+</select>
+
+<select name="" id="products"></select>
+</body>
+</html>

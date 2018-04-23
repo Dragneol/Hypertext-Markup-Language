@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul.menu {
+            width: 20%;
+        }
+
+        ul.menu > li {
+            background-color: #ffc;
+            height: auto;
+            width: 100%;
+            list-style-type: none;
+        }
+
+        .submenu {
+            width: 100%;
+            transition: all 0.5s;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script !src="">
+        function show(itemList) {
+            var tag_ul = itemList.getElementsByTagName('ul');
+            if (tag_ul[0].style.height == '0px' || tag_ul[0].style.height == null) tag_ul[0].style.height = 'auto';
+            else tag_ul[0].style.height = '0px';
+        }
+    </script>
+</head>
+<body>
+<ul id="menu">
+    <li>home</li>
+    <li onclick="show(this)">sanpham
+        <ul class="submenu">
+            <li>ao</li>
+            <li>quan</li>
+        </ul>
+    </li>
+    <li onclick="show(this)">khuyen mai
+        <ul class="submenu">
+            <li>VIP</li>
+            <li>sinhnhat</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

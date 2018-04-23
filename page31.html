@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .noError {
+            visibility: hidden;
+        }
+
+        .error {
+            visibility: visible;
+            color: red;
+        }
+    </style>
+    <script>
+        function noError() {
+            var arr_span = document.getElementById("f").getElementsByTagName("span");
+            for (var i = 0; i < arr_span.length; i++)
+                arr_span[i].className = "noError";
+        }
+        function check() {
+            var arr_text = document.getElementById("f").getElementsByClassName("text");
+            var arr_span = document.getElementById("f").getElementsByTagName("span");
+            for (var i = 0; i < arr_text.length; i++) {
+                if (arr_text[i].value == "")
+                    arr_span[i].className = "error";
+                else arr_span[i].className = "noError";
+            }
+        }
+    </script>
+</head>
+<body onload="noError()">
+<form action="" id="f">
+    <p><input type="text" class="text"><span>error</span></p>
+    <p><input type="text" class="text"><span>error</span></p>
+    <p><input type="text" class="text"><span>error</span></p>
+    <p><input type="button" value="check" onclick="check()"></p>
+</form>
+</body>
+</html>

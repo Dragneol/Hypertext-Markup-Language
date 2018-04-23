@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var t = 11;
+        var timeID;
+        function countDown() {
+            t--;
+            if (t > 0) document.getElementById("nut").value = (t - 1);
+            timeID = window.setTimeout("countDown()", 1000);
+            if (t == 0) {
+                window.clearTimeout(timeID);
+                if (a + b == document.getElementById("c").value)
+                    alert("You Win");
+                else alert("You Lose");
+            }
+        }
+
+        function phatsinh() {
+            var a, b;
+            a = Math.round(Math.random() * 1000000) % 901 + 100;
+            b = Math.round(Math.random() * 1000000) % 901 + 100;
+            document.getElementById("a").value = a;
+            document.getElementById("b").value = b;
+        }
+
+        function loadDate() {
+            var d = new Date();
+            var thu = d.getDay() + 1;
+            var ngay = d.getDate();
+            var thang = d.getMonth() + 1;
+            var nam = d.getYear();
+            var s;
+            if (thu == 1)
+                s = "chu nhat" + ngay + "/" + thang + "/" + nam;
+            else
+                s = "thu " + thu + " " + ngay + "/" + thang + "/" + nam;
+            document.getElementById("date").innerHTML = s;
+        }
+
+        function loadTime() {
+            var time = new Date();
+            var hour = time.getHours();
+            var min = time.getMinutes();
+            var sec = time.getSeconds();
+
+            document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec;
+            window.setTimeout("loadTime()", 1000);
+        }
+    </script>
+</head>
+<body onload="countDown(); phatsinh();loadDate();loadTime()">
+<h2 id="date"></h2>
+<h3 id="time"></h3>
+<input type="button" value="10" id="nut">
+<p> a=<input type="text" id="a"> + b= <input type="text" id="b"></p>
+<p>ket qua = <input type="text" id="c"></p>
+</body>
+</html>

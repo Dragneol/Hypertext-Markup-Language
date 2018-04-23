@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script !src="">
+        function check() {
+//            var tag = document.getElementById("t");
+//            var regex =/^[a-m][0-9]{3,5}$/;
+//            var regex1 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$/;
+////            if (regex.test(tag.value))
+////                alert("true");
+////            else alert("false");
+//
+//            if (regex1.test(tag.value))
+//                alert("true");
+//            else alert("false");
+
+            var kq = document.f.getElementsByTagName("span");//
+
+            var c1 = document.f.email;
+            var c2 = document.f.password;
+            var c3 = document.f.phone;
+
+            var regex_Email = /^[a-zA-Z0-9]+[@][a-zA-Z]+[.][a-zA-Z]+([.][a-zA-Z]+)?$/;
+            var regex_Phone = /^(\d){8,12}$/;
+
+            if (regex_Email.test(c1.value) == false) {
+                kq[0].style.display = "inline";
+                return false;
+            } else if (c2.value.length < 4 || c2.value.length > 8) {
+                kq[0].style.display = "none";
+                kq[1].style.display = "inline";
+                return false;
+            } else if (regex_Phone.test(c3.value)== false) {
+                kq[0].style.display = "none";
+                kq[1].style.display = "none";
+                kq[2].style.display = "inline";
+                return false;
+            } else {
+                kq[0].style.display = "none";
+                kq[1].style.display = "none";
+                kq[2].style.display = "none";
+                //save info in localStorage
+                window.localStorage.setItem(c1.value, c2.value);
+                return true;
+            }
+        }
+    </script>
+    <style>
+        form span {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--<input type="text" id="t">-->
+<!--<input type="button" value="click" onclick="check()">-->
+
+<form action="" name="f">
+    <table>
+        <tr>
+            <td><input type="email" name="email"><span>error</span></td>
+        </tr>
+        <tr>
+            <td><input type="password" name="password"><span>error</span></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="phone"><span>error</span></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="submit" onclick="return check()"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

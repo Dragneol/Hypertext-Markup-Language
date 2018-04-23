@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="giohang.js"></script>
+    <style>
+        .img {
+            height: 100px;
+            width: 100px;
+        }
+        
+        #cart {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 100px;
+            left: 200px;
+        }
+        
+        #detail table {
+            border: 1px solid black;
+        }
+        
+        #detail tr:first-child {
+            background-color: #009;
+            color: #FFF;
+        }
+        
+        #detail img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <a href="#" onclick="show()">Xem gio hang</a>
+    <div>
+        <img src="image2.jpg" />
+        <a href="#" onclick="add('a1','bep','image2.jpg',100)">mua</a>
+        <p></p>
+        <img src="image3.jpg" />
+        <a href="#" onclick="add('a2','giuong','image3.jpg',200)">mua</a>
+    </div>
+    <div id="cart">
+        <div id="detail">
+        </div>
+        <div id="form">
+            <p><input type="text" placeholder="Nhap ho ten" /></p>
+            <p><input type="text" placeholder="Dien thoai" /></p>
+            <p><input type="button" value="hoan thanh" onclick="finish()" /></p>
+        </div>
+    </div>
+</body>
+
+</html>

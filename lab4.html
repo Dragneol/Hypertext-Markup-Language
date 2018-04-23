@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calvin Klein</title>
+    <style>
+        body {
+            font-family: Courgette-Regular, Font-Awsome, sans-serif;
+        }
+        
+        @font-face {
+            font-family: Font-Awesome;
+            src: url(fonts/Fontawesome.otf);
+        }
+        
+        @font-face {
+            font-family: Courgette-Regular;
+            src: url(fonts/Courgette-Regular.ttf);
+        }
+        
+        #header {
+            width: 100%;
+            float: left;
+            height: 100px;
+        }
+        
+        .inheader {
+            width: 100%;
+            height: 50px;
+            background-color: black;
+        }
+        
+        .inheader>span {
+            float: right;
+            width: 10%;
+            margin-left: 1%;
+            margin-top: 1%;
+            text-transform: uppercase;
+            color: grey;
+        }
+        
+        .inheader>input {
+            background-image: url("resource/avatar.png");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: contain;
+            float: right;
+            height: 35px;
+            width: 300px;
+        }
+        
+        #tile {
+            width: 100%;
+            float: left;
+            height: 150px;
+        }
+        
+        #tile>h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 50px;
+        }
+        
+        #navi {
+            width: 80%;
+            text-align: center;
+            position: relative;
+            left: 15%;
+            top: -30px;
+        }
+        
+        #navi>li {
+            width: 12%;
+            height: 15px;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-right: 1%;
+            float: left;
+            list-style-type: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        #page {
+            width: 100%;
+            float: left;
+            height: 500px;
+        }
+        
+        #page>div {
+            width: 100%;
+            float: left;
+            height: 250px;
+        }
+        
+        #brands {
+            width: 100%;
+            float: left;
+            height: 250px;
+            background-color: grey;
+        }
+        
+        #brands>h1 {
+            font-size: 70px;
+            text-transform: uppercase;
+            font-weight: 100;
+            margin-left: 2%;
+        }
+        
+        #brands>span {
+            text-transform: uppercase;
+            margin-left: 2%;
+            /*box-sizing: border-box;*/
+            /*padding-top: -2%;*/
+            position: relative;
+            top: -60px;
+            font-size: 20px;
+        }
+        
+        #menu {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            float: right;
+            background-color: white;
+            width: 10%;
+            box-sizing: border-box;
+            margin-top: 0.1%;
+            margin-right: 0.1%;
+            opacity: 0.7;
+        }
+        
+        #menu>ul {
+            box-sizing: border-box;
+            padding-left: 0px;
+        }
+        
+        #menu>ul>li {
+            height: 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            list-style-type: none;
+            display: block;
+            font-weight: bold;
+            margin-top: 5px;
+            padding-left: 15px;
+        }
+        
+        #menu li:hover {
+            background-color: grey;
+            cursor: pointer;
+        }
+        
+        #collection {
+            background-color: darkgrey;
+            background-image: url("resource/ghost.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #collection>h1 {
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: 100;
+            margin-left: 2%;
+        }
+        
+        #collection>span {
+            text-transform: uppercase;
+            margin-left: 2%;
+            /*box-sizing: border-box;*/
+            /*padding-top: -2%;*/
+            position: relative;
+            top: -40px;
+            font-size: 15px;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="inheader">
+            <span style="float: left;width: 70%">Preferred Loyalty Program</span>
+            <span>With List</span>
+            <span>My Bag</span>
+        </div>
+        <div class="inheader" style="background-color: white"><input type="text" placeholder="Can we help you find something?"></div>
+    </div>
+    <hr>
+    <div id="tile">
+        <h1>Calvin Klein</h1>
+        <div>
+            <ul id="navi">
+                <li>Women</li>
+                <li>Men</li>
+                <li>UnderWear</li>
+                <li>Fragrance</li>
+                <li>Home</li>
+                <li>Sale</li>
+                <li>Project</li>
+            </ul>
+        </div>
+    </div>
+    <div id="page">
+        <div id="brands">
+            <div id="menu">
+                <select>
+                <option>brands</option>
+                <option>collection</option>
+                <option>platinum</option>
+                <option>main label</option>
+                <option>jeans</option>
+                <option>performance</option>
+                <option>underwear</option>
+                <option>watches+jewery</option>
+                <option>fragrance</option>
+                <option>home</option>
+            </select>
+            </div>
+            <h1>Brands</h1>
+            <span>Explore our range of products</span>
+        </div>
+        <div id="collection">
+            <h1>Calvin Klein Collection</h1>
+            <span>Out most pestigious and luxurios brand, setting the tone of elegance and modern sophistication</span>
+        </div>
+    </div>
+</body>
+
+</html>

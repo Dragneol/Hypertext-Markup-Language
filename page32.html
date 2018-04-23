@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #to {
+            width: 400px;
+            height: 300px;
+        }
+
+        .mo {
+            width: 100px;
+            height: 100px;
+            opacity: 0.1;
+        }
+
+        .ro {
+            width: 100px;
+            height: 100px;
+            opacity: 0.7;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function show(target) {
+            var anhTo = document.getElementById('to');
+            anhTo.src = target.src;
+
+            var tag_p = document.getElementById('list');
+            var arr = tag_p.getElementsByTagName('img')
+            for (var i = 0; i < arr.length; i++) {
+                arr[i].className = "mo";
+            }
+            target.className = "ro";
+        }
+    </script>
+</head>
+<body>
+<img src="resource/ghost.jpg" id="to">
+<p id="list">
+    <img src="resource/ghost.jpg" class="mo" onmouseover="show(this)">
+    <img src="resource/L.jpg" class="mo" onmouseover="show(this)">
+    <img src="resource/Lawliet.jpg" class="mo" onmouseover="show(this)">
+    <img src="resource/Kira.png" class="mo" onmouseover="show(this)">
+</p>
+</body>
+</html>
